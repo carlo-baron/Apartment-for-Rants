@@ -13,13 +13,28 @@
             <h1>rantals.</h1>
             <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, eum.</h3>
         </div>
-        <form action="main.html"> 
-            <input type="text" id="username" placeholder="Username">
-            <input type="text" id="password" placeholder="Password">
-            <input type="submit" value="Log In">
-            <hr>
-            <input type="button" value="Create account" onclick="window.location.href='main.html'">
-        </form>
+        <div id="login-credentials">
+            <form action="main.html"> 
+                <input type="text" id="username" placeholder="Username">
+                <input type="text" id="password" placeholder="Password">
+                <input type="submit" value="Log In">
+                <hr>
+                <input id="create-account" type="button" value="Create account">
+            </form>
+        </div>
     </section>
+    <div id="modal">
+        <div class="modal-content">
+            <h2>Sign Up</h2>
+            <p>Just some simple information.</p>
+            <hr>
+            <form action="submit">
+                <input type="text" id="username" placeholder="Username">
+                <input type="text" id="password" placeholder="password">
+                <input type="submit" value="Sign Up">
+            </form>
+        </div>
+    </div>
+    <script src="login.js"></script>
 </body>
 </html>
