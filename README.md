@@ -1,5 +1,2 @@
-HELLO
-
-Practice 
-
-5/22/24 Re-clone repo to pc
+# Project Overview
+In the future this might be my own social media platform
