@@ -1,2 +1,2 @@
 # Project Overview
-In the future this might be my own social media platform
+In the future this might be a social media platform
