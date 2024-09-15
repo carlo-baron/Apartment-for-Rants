@@ -3,13 +3,20 @@
   padding: 0;
 }
 
-#bg{
+.bg{
   position: absolute;
-  z-index: -10;
   object-fit: cover;
   
   width: 100%;
   height: 100%;
+}
+
+#day{
+  z-index: -4;
+}
+
+#night{
+  z-index: -5;
 }
 
 #container {
