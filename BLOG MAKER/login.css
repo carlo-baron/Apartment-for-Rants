@@ -68,6 +68,8 @@
 
 .modal-content h2 {
   margin: 1rem 0 0 1rem;
+  display: inline-block; 
+  margin-right: 55%;
 }
 
 .modal-content p {
@@ -78,8 +80,18 @@
   margin: 1rem 0 1rem 0;
 }
 
-/* .modal-content form {
-} */
+.modal-content button{
+  border: none;
+  background: none;
+  right: 0;
+  display: inline-block; 
+  font-size: 1.5rem;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+}
 
 h1 {
   font-size: 4rem;

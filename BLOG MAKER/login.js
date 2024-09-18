@@ -1,5 +1,7 @@
 const modal = document.getElementById("modal");
-const create = document.getElementById("create-account");
+const createAccountButton = document.getElementById("create-account");
+const exitAccountCreationButton = document.getElementById("exit-account-creation");
+
 let isDay = true;
 
 window.onload = function(){
@@ -15,8 +17,12 @@ window.onload = function(){
     isDay ? fadeInEffect() : fadeOutEffect();
 }
 
-create.onclick = function(){
+createAccountButton.onclick = function(){
     modal.style.display = "flex";
+}
+
+exitAccountCreationButton.onclick = function(){
+    modal.style.display = "none";
 }
 
 function fadeOutEffect() {
