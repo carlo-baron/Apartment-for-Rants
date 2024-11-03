@@ -1,8 +1,14 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 h1{
     text-align: center;
 }
 
-button{
+#logout-button{
     position: absolute;
 }
 
@@ -17,19 +23,42 @@ button{
     color: inherit;
 }
 
-#apartment{
-    display: grid;  
-    grid-template-columns: auto auto auto;
+#apartments{
+    display: flex;
     justify-content: center;
+    height: 100%;
 }
 
-#apartment div{
-    margin: 10px;
+#posts-container{
+    width: 50vw;
+    height: 100%;
+}
+
+.post-body{
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.post-head{
+    height: 15%;
     display: flex;
-    background-color: brown;
-    width: 1in;
-    height: 1in;
-    outline-style: solid;
     justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+.post-content{
+    background-color: bisque;
+    height: 70%;
+}
+
+.post-interactions{
+    height: 15%;
+    width: 100%;
+    background-color: brown;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
 }
