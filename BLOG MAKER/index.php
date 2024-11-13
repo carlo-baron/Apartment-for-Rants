@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    if(isset($_SESSION["id"])){
+        header("Location: main.html");
+    }else{
+        echo "nay";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
