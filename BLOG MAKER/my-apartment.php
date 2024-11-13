@@ -13,3 +13,9 @@
     <h1>My Apartments</h1>
 </body>
 </html>
+<?php
+    //echo display name and birthdate
+    $registered_info = "SELECT * FROM login WHERE id = '" . $_SESSION['id'] . "'";
+    $result = mysqli_query($connection, $registered_info);
+    $registered_id = mysqli_fetch_assoc($result);
+?>
