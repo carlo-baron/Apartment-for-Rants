@@ -13,10 +13,11 @@
             $row = mysqli_fetch_assoc($result);
             $verify_password = password_verify($password, $row['password']);
             if($verify_password){
-                header("Location: main.html");
+                header("Location: main.php");
                 $_SESSION["id"] = $row["id"];
             }else{
-                echo "error";
+                //send error for front end
+                header("Location: login.php");
             }
         }
     }

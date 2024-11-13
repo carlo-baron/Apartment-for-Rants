@@ -19,7 +19,7 @@
             VALUES ('$username', '$hashed_password', '$birthday', '$display_name')";
             mysqli_query($connection,$sql);
 
-            echo "<script>alert('Successfully Registered')</script>";
+            header("Location: index.php");
         }
         
     }

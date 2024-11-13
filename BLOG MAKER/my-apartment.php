@@ -1,3 +1,7 @@
+<?php
+    include("session-check.php");
+    include("database.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

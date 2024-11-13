@@ -1,12 +1,6 @@
 <?php
-    session_start();
-    if(isset($_SESSION["id"])){
-        header("Location: main.html");
-    }else{
-        echo "nay";
-    }
+    include("session-check.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,7 +23,7 @@
         <div id="login-credentials">
             <form action="login.php" method="post">
                 <input type="text" name="username" placeholder="Username" autocomplete="off" required>
-                <input type="text" name="password" placeholder="Password" autocomplete="off" required>
+                <input type="password" name="password" placeholder="Password" autocomplete="off" required>
                 <input type="submit" name="login" value="Log In">
                 <hr>
                 <input id="create-account" type="button" value="Create account">
