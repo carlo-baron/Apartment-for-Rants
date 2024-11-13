@@ -18,16 +18,16 @@
             <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, eum.</h3>
         </div>
         <div id="login-credentials">
-            <form action="main.html">
-                <input type="text" id="username" placeholder="Username" autocomplete="off" required>
-                <input type="text" id="password" placeholder="Password" autocomplete="off" required>
-                <input type="submit" value="Log In">
+            <form action="login.php" method="post">
+                <input type="text" name="username" placeholder="Username" autocomplete="off" required>
+                <input type="text" name="password" placeholder="Password" autocomplete="off" required>
+                <input type="submit" name="login" value="Log In">
                 <hr>
                 <input id="create-account" type="button" value="Create account">
             </form>
         </div>
     </section>
-    <div id="modal">
+    <div id="modal"> 
         <div class="modal-content">
             <div id="header">
                 <h2>Sign Up</h2>
@@ -35,12 +35,12 @@
                 <p>Just some simple information.</p>
                 <hr>
             </div>
-            <form>
-                <input type="text" id="username" placeholder="Username" autocomplete="off" required>
-                <input type="password" id="password" placeholder="Password" autocomplete="off" required>
-                <input type="text" id="display-name" placeholder="Display Name" autocomplete="off" required>
-                <input type="date" id="birthday" required>
-                <input type="submit" value="Sign Up">
+            <form action="register.php" method="post">
+                <input type="text" name="username" placeholder="Username" autocomplete="off" required>
+                <input type="password" name="password" placeholder="Password" autocomplete="off" required>
+                <input type="text" name="display-name" placeholder="Display Name" autocomplete="off" required>
+                <input type="date" name="birthday" required>
+                <input type="submit" name="register" value="Sign Up">
             </form>
         </div>
     </div>

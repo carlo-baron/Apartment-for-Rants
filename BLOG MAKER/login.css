@@ -49,6 +49,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   margin-inline: 3em;
+  color: white;
 }
 
 #login-credentials {
