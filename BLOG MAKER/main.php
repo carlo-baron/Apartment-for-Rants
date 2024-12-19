@@ -20,41 +20,23 @@
         <a href="my-apartment.php">My Apartments</a>
     </section>
     <section id="apartments">
+
         <div id="posts-container">
-            <div class="post-body">
+            <div class="post-body" data-post-id="1">
                 <div class="post-head">
                     <div class="post-number">001</div>
                 </div>
                 <div class="post-content"></div>
                 <div class="post-interactions">
-                    <button>Like</button>
-                    <button>Comment</button>
-                    <button>Share</button>
+                    <button class="like-btn" data-post-id="1">Like</button>
+                    <button class="comment-btn" data-post-id="1">Comment</button>
+                    <button class="share-btn" data-post-id="1">Share</button>
                 </div>
             </div>
-            <div class="post-body">
-                <div class="post-head">
-                    <div class="post-number">001</div>
-                </div>
-                <div class="post-content"></div>
-                <div class="post-interactions">
-                    <button>Like</button>
-                    <button>Comment</button>
-                    <button>Share</button>
-                </div>
-            </div>
-            <div class="post-body">
-                <div class="post-head">
-                    <div class="post-number">001</div>
-                </div>
-                <div class="post-content"></div>
-                <div class="post-interactions">
-                    <button>Like</button>
-                    <button>Comment</button>
-                    <button>Share</button>
-                </div>
+            <div class="comment-box">
             </div>
         </div>
+
     </section>
     <script src="main.js"></script>
 </body>
