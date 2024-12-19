@@ -1,0 +1,26 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#logout-button{
+    position: absolute;
+}
+
+#tabs{
+    display: flex;
+    justify-content: center;
+}
+
+#tabs a{
+    padding: 10px;
+    text-decoration: none;
+    color: inherit;
+}

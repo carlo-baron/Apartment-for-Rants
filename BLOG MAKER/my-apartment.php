@@ -8,9 +8,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Apartments</title>
+    <link rel="stylesheet" href="my-apartment.css">
 </head>
 <body>
-    <h1>My Apartments</h1>
+    <form action="logout.php" method="post">
+        <button name="logout" id="logout-button" type="submit">X</button>
+    </form>
+    <h1>Find Rooms</h1>
+    <section id="tabs">
+        <a href="main.php">Apartments</a>
+        <a href="my-apartment.php">My Apartments</a>
+    </section>
+    <h2>My Apartments</h2>
 </body>
 </html>
 <?php
