@@ -62,6 +62,23 @@ h1{
     display: flex;
     justify-content: space-around;
     align-items: center; 
+    position: relative;
+}
+
+.reaction-tab{
+    background-color: white;
+    position: absolute;
+    height: 2rem;
+    width: 8rem;
+    border-radius: 0.6rem;
+    display: none;
+    bottom: 60%;
+    left: 24%;
+    transform: translateX(-50%);
+}
+
+.like-btn:hover~.reaction-tab{
+    display: block;
 }
 
 .comment-box{
