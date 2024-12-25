@@ -31,6 +31,7 @@
                 <div class="post-interactions">
                     <button class="like-btn" data-post-id="1">Like</button>
                     <div class="reaction-tab" data-post-id="1"></div>
+                    <button class="comment-btn" data-post-id="1">Comment</button>
                     <button class="share-btn" data-post-id="1">Share</button>
                 </div>
 
