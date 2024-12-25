@@ -7,15 +7,7 @@ document.addEventListener("click", function (event){
         console.log(`Liked post ${postId}`);
     }else if(target.classList.contains("comment-btn")){
         console.log(`Commented post ${postId}`);
-        const commentBox = postBody.nextElementSibling;
-
-        const displayState = commentBox.style.display;
-
-        if(displayState == "none"){
-            commentBox.style.display = "block";
-        }else{
-            commentBox.style.display = "none";
-        }
+        //open post
     }else if(target.classList.contains("share-btn")){
         console.log(`Shared post ${postId}`);
     }
