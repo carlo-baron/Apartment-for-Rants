@@ -13,14 +13,15 @@
     </head>
 
     <body>
-        <form action="logout.php" method="post">
-            <button name="logout" id="logout-button" type="submit">X</button>
-        </form>
-        <h1>Find Rooms</h1>
-        <section id="tabs">
-            <a href="main.php">Apartments</a>
-            <a href="my-apartment.php">My Apartments</a>
-        </section>
+        <header>
+            <form action="logout.php" method="post">
+                <button name="logout" id="logout-button" type="submit">X</button>
+            </form>
+            <section id="tabs">
+                <a href="main.php">Apartments</a>
+                <a href="my-apartment.php">My Apartments</a>
+            </section>
+        </header>
 
         <section id="apartments">
             <div id="posts-container">

@@ -13,8 +13,20 @@ body {
     flex-direction: column;
 }
 
-h1{
-    text-align: center;
+header{
+    height: 8vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: white;
+    top: 0;
+    z-index: 999;
+
+    -webkit-box-shadow: inset 0px -2px 0px 0px rgba(0,0,0,0.39);
+    -moz-box-shadow: inset 0px -2px 0px 0px rgba(0,0,0,0.39);
+    box-shadow: inset 0px -2px 0px 0px rgba(0,0,0,0.39);
 }
 
 #logout-button {
@@ -44,6 +56,7 @@ h1{
     display: flex;
     justify-content: center;
     height: 100%;
+    margin-top: 10vh;
 }
 
 
