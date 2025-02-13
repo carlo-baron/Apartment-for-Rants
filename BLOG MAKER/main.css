@@ -44,12 +44,25 @@ header{
 #tabs{
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 50vw;
 }
 
 #tabs a{
     padding: 10px;
+    width: 100%;
+    height: 90%;
     text-decoration: none;
     color: inherit;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#tabs a:hover{
+    background-color: aliceblue;
 }
 
 #apartments{
