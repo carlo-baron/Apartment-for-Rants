@@ -1,6 +1,6 @@
 <?php
-include("session-check.php");
-include("database.php");
+include("../../includes/session-check.php");
+include("../../includes/config/database.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,17 +9,17 @@ include("database.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Apartments</title>
-    <link rel="stylesheet" href="my-apartment.css">
+    <link rel="stylesheet" href="../../assets/css/pages/my-apartment.css">
 </head>
 
 <body>
     <header>
-        <form action="logout.php" method="post">
+        <form action="../../src/auth/logout.php" method="post">
             <button name="logout" id="logout-button" type="submit">X</button>
         </form>
         <section id="tabs">
-            <a href="main.php">Apartments</a>
-            <a href="my-apartment.php">My Apartments</a>
+            <a href="../../src/pages/main.php">Apartments</a>
+            <a href="../../src/pages/my-apartment.php">My Apartments</a>
         </section>
     </header>
     <section id="content">
@@ -31,7 +31,7 @@ include("database.php");
 </html>
 <?php
 //echo display name and birthdate
-$registered_info = "SELECT * FROM users WHERE user_id = '" . $_SESSION['id'] . "'";
+$registered_info = "SELECT * FROM users WHERE login_id = '" . $_SESSION['id'] . "'";
 $result = mysqli_query($connection, $registered_info);
 $registered_id = mysqli_fetch_assoc($result);
 

@@ -1,5 +1,5 @@
 <?php
-    include("database.php");
+    include("../../includes/config/database.php");
     session_start();
 
     if (isset($_POST["login"])) {
@@ -14,14 +14,17 @@
             $verify_password = password_verify($password, $row['password']);
 
             if ($verify_password) {
-                header("Location: main.php");
+                header("Location: ../../src/pages/main.php");
                 $_SESSION["id"] = $row["id"];
                 exit();
             } else {
                 echo "incorrect password";
-                header("Location: main.php");
+                header("Location: ../../index.php");
                 exit();
             }
+        }else{
+            header("Location: ../../index.php");
+            exit;
         }
     }
 
