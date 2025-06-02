@@ -26,18 +26,7 @@ include("../../includes/config/database.php");
         <h2>My Apartments</h2>
 
     </section>
+    <script src="../../assets/js/pages/user-data.js"></script>
 </body>
 
 </html>
-<?php
-//echo display name and birthdate
-$registered_info = "SELECT * FROM users WHERE login_id = '" . $_SESSION['id'] . "'";
-$result = mysqli_query($connection, $registered_info);
-$registered_id = mysqli_fetch_assoc($result);
-
-echo $registered_id["display_name"] . "<br>";
-echo $registered_id["birthday"] . "<br>";
-
-// i guess ill have to use join to easily get the values, but ill do it later
-// echo $registered_id["reg_date"] . "<br>";
-?>

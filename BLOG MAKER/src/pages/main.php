@@ -1,6 +1,6 @@
 <input?php
     include("session-check.php");
-    ?>
+?>
     <!DOCTYPE html>
     <html lang="en">
 
@@ -24,23 +24,7 @@
         </header>
 
         <section id="apartments">
-            <div id="posts-container">
-
-                <!-- should be given by the server -->
-                <div class="post-body">
-                    <div class="post-head">
-                        <div class="post-number">001</div>
-                    </div>
-                    <div class="post-content"></div>
-                    <form method="post" class="post-interactions" data-post-id="1">
-                        <button class="like-btn" type="button" name="like">Like</button>
-                        <div class="reaction-tab"></div>
-                        <button class="comment-btn" type="button" name="comment">Comment</button>
-                        <button class="share-btn" type="button" name="share">Share</button>
-                    </form>
-                </div>
-
-            </div>
+            <div id="posts-container"></div>
         </section>
         <script src="../../assets/js/pages/main.js"></script>
     </body>
