@@ -14,8 +14,14 @@
             $verify_password = password_verify($password, $row['password']);
 
             if ($verify_password) {
+                $loginId = $row["id"];
+                $sql = "SELECT user_id FROM users WHERE login_id = '$loginId'";
+                $userResult = mysqli_query($connection, $sql);
+                if(mysqli_num_rows($userResult) > 0){
+                    $row = mysqli_fetch_assoc($userResult);
+                    $_SESSION["id"] = $row["user_id"];
+                }
                 header("Location: ../../src/pages/main.php");
-                $_SESSION["id"] = $row["id"];
                 exit();
             } else {
                 echo "incorrect password";

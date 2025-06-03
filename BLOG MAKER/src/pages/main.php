@@ -14,6 +14,7 @@
 
     <body>
         <header>
+            <button id="create-post">HELLO</button>
             <form action="../../src/auth/logout.php" method="post">
                 <button name="logout" id="logout-button" type="submit">X</button>
             </form>

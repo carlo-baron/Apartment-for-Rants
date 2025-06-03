@@ -22,8 +22,11 @@ fetch("/Blog Maker/src/api/get-posts.php")
         });
     });
 
+const createPostButton = document.getElementById("create-post");
 
-
+createPostButton.addEventListener("click", () => {
+    window.location.href = "create-post.php";
+});
 
 document.addEventListener("click", (event) => {
     const target = event.target;

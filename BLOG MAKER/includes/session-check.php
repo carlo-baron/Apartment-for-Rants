@@ -6,7 +6,7 @@
         }
     }else{
         if ($_SERVER['PHP_SELF'] !== '/BLOG MAKER/index.php' ){
-            header("Location: ../index.php");
+            header("Location: ../../index.php");
         }
     }
 ?>
