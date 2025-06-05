@@ -26,6 +26,14 @@
 
         <section id="apartments">
             <div id="posts-container"></div>
+            <div id="modal">
+                <div class="comment-container">
+                    <div id="header">
+                        <h2>Poster<button id="exit-modal">X</button></h2>
+                    </div>
+                    <hr>
+                </div>
+            </div>
         </section>
         <script src="../../assets/js/pages/main.js"></script>
     </body>
