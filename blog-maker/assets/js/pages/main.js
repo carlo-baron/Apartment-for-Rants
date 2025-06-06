@@ -55,7 +55,7 @@ document.addEventListener("click", (event) => {
     } else if (target.classList.contains("comment-btn")) {
         event.preventDefault();
         viewCommentsModal.style.display = "flex";
-        viewCommentsModal.querySelector("h2").childNodes[0].nodeValue = postsDataById[postId]["display_name"];
+        viewCommentsModal.querySelector("h2").childNodes[0].nodeValue = postsDataById[postId]["display_name"] + "'s post";
         
         console.log(`Commented post ${postId}`);
     } else if (target.classList.contains("share-btn")) {
