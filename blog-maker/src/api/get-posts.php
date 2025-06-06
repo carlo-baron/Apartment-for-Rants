@@ -3,7 +3,9 @@
 
     header("Content-Type: Application/json");
     if($_SERVER["REQUEST_METHOD"] == "GET"){
-        $sql = "SELECT post_id, title, content FROM posts";
+        $sql = "SELECT display_name, post_id, title, content, created_at
+            FROM users INNER JOIN posts
+            ON users.user_id = posts.user_id";
         $result = mysqli_query($connection, $sql);
 
         if(mysqli_num_rows($result) > 0){
