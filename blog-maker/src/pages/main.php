@@ -31,11 +31,14 @@
                     <div id="header">
                         <h2>Poster<button id="exit-modal">X</button></h2>
                     </div>
+                    <div id="post"></div>
                     <hr>
                 </div>
             </div>
         </section>
-        <script src="../../assets/js/pages/main.js"></script>
+        <script src="../../assets/js/pages/main/load-post.js"></script>
+        <script src="../../assets/js/pages/main/redirect.js"></script>
+        <script src="../../assets/js/pages/main/post-interaction.js"></script>
     </body>
 
     </html>

@@ -1,0 +1,34 @@
+let postsData = [];
+let postsDataById = {};
+let container = document.getElementById("posts-container");
+
+async function loadPosts() {
+    const res = await fetch("/blog-maker/src/api/get-posts.php");
+    postsData = await res.json();
+    
+
+    postsData.forEach(post => {
+        postsDataById[post.post_id] = post;
+
+        let html = `
+            <div class="post-body">
+                <div class="post-head">
+                    <div class="post-number">001</div><br>
+                    <div class="title">${post.title}</div>
+                </div>
+                <div class="post-content">${post.content}</div>
+                <form method="post" class="post-interactions" data-post-id="${post.post_id}">
+                    <button class="like-btn" type="button" name="like">Like</button>
+                    <div class="reaction-tab"></div>
+                    <button class="comment-btn" type="button" name="comment">Comment</button>
+                    <button class="share-btn" type="button" name="share">Share</button>
+                </form>
+            </div>
+        `;
+        container.innerHTML += html;
+    });
+}
+
+loadPosts();
+
+

@@ -154,7 +154,13 @@ header{
 
 #header {
     position: relative;
+    z-index: 100;
     text-align: center;
+    padding-bottom: 1rem;
+
+    -webkit-box-shadow: inset 0px -2px 0px 0px rgba(0,0,0,0.39);
+    -moz-box-shadow: inset 0px -2px 0px 0px rgba(0,0,0,0.39);
+    box-shadow: inset 0px -2px 0px 0px rgba(0,0,0,0.39);
 }
 
 .comment-container hr {
@@ -166,4 +172,8 @@ header{
     right: 15px;
     border: none;
     font-size: 1.5rem;
+}
+
+#post{
+    overflow: scroll;
 }
