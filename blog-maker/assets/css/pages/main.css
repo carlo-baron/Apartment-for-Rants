@@ -141,7 +141,7 @@ header{
 .comment-container{
     background-color: beige;
     width: 96vw;
-    height: 90vh;
+    height: 95vh;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
@@ -152,7 +152,7 @@ header{
   display: inline-block; 
 }
 
-#header {
+.comment-head{
     position: relative;
     z-index: 100;
     text-align: center;
@@ -167,13 +167,21 @@ header{
   margin-top: 1rem;
 }
 
-.comment-container button{
+#exit-modal{
     position: absolute;
     right: 15px;
     border: none;
     font-size: 1.5rem;
 }
 
-#post{
-    overflow: scroll;
+#comment-post{
+    overflow-y: scroll;
+}
+
+.comment-form{
+    height: 15vh;
+}
+
+.comment-form input{
+    
 }

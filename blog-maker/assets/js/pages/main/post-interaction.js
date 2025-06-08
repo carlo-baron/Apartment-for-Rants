@@ -28,7 +28,7 @@ exitCommentModal.addEventListener("click", ()=>{
 });
 
 function openPost(postId){
-    let commentContainer = document.getElementById("post");
+    let commentContainer = document.getElementById("comment-post");
     document.body.style.overflow = "hidden";
 
     viewCommentsModal.style.display = "flex";
@@ -50,4 +50,16 @@ function openPost(postId){
         </div>
     `;
     commentContainer.innerHTML = html;
+    
+    getComments(postId, commentContainer);
+}
+
+async function getComments(postId, commentContainer){
+    const res = await fetch("/blog-maker/src/api/get-comments.php?id=" + postId);
+    comments = await res.json();
+
+    comments.forEach(comment => {
+        console.log(comment["content"]);
+        commentContainer.innerHTML += `<p>${comment['content']}</p>`; 
+    });
 }

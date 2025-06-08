@@ -1,5 +1,6 @@
-<input?php
-    include("session-check.php");
+<?php
+    include("../../includes/session-check.php");
+    include("../../includes/config/database.php"); 
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -28,11 +29,14 @@
             <div id="posts-container"></div>
             <div id="modal">
                 <div class="comment-container">
-                    <div id="header">
+                    <div class="comment-head">
                         <h2>Poster<button id="exit-modal">X</button></h2>
                     </div>
-                    <div id="post"></div>
-                    <hr>
+                    <div id="comment-post"></div>
+                    <form class="comment-form" action="#" method="post">
+                        <input type="text" name="comment" required>
+                        <input type="submit" name="submit" value="Submit">
+                    </form>
                 </div>
             </div>
         </section>
@@ -42,3 +46,12 @@
     </body>
 
     </html>
+<?php
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        $comment = $_POST['comment']; 
+        $id = $_SESSION['id'];
+        $sql = "INSERT INTO comments (content, user_id, post_id) VALUES ('$comment', '$id')"; 
+        mysqli_query($connection, $sql);
+        mysqli_close($connection);
+    }
+?>

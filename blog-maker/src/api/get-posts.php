@@ -1,6 +1,6 @@
 <?php
     include("../../includes/config/database.php");
-
+//  currently get all post made
     header("Content-Type: Application/json");
     if($_SERVER["REQUEST_METHOD"] == "GET"){
         $sql = "SELECT display_name, post_id, title, content, created_at
@@ -14,6 +14,7 @@
                 $posts[] = $row;
             }
             echo json_encode($posts);
+            mysqli_close($connection);
         }
     }
 ?>
