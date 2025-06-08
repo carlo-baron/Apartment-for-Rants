@@ -33,7 +33,7 @@
                         <h2>Poster<button id="exit-modal">X</button></h2>
                     </div>
                     <div id="comment-post"></div>
-                    <form class="comment-form" action="#" method="post">
+                    <form class="comment-form">
                         <input type="text" name="comment" required>
                         <input type="submit" name="submit" value="Submit">
                     </form>
@@ -43,15 +43,7 @@
         <script src="../../assets/js/pages/main/load-post.js"></script>
         <script src="../../assets/js/pages/main/redirect.js"></script>
         <script src="../../assets/js/pages/main/post-interaction.js"></script>
+        <script src="../../assets/js/pages/main/make-comment.js"></script>
     </body>
 
     </html>
-<?php
-    if($_SERVER['REQUEST_METHOD'] == "POST"){
-        $comment = $_POST['comment']; 
-        $id = $_SESSION['id'];
-        $sql = "INSERT INTO comments (content, user_id, post_id) VALUES ('$comment', '$id')"; 
-        mysqli_query($connection, $sql);
-        mysqli_close($connection);
-    }
-?>

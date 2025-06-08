@@ -1,5 +1,6 @@
 const viewCommentsModal = document.getElementById("modal");
 const exitCommentModal = document.getElementById("exit-modal");
+let currentPostId = 0;
 
 document.addEventListener("click", (event) => {
     const target = event.target;
@@ -24,12 +25,14 @@ document.addEventListener("click", (event) => {
 
 exitCommentModal.addEventListener("click", ()=>{
     viewCommentsModal.style.display = "none";
+    currentPostId = 0;
     document.body.style.overflow = "auto";
 });
 
 function openPost(postId){
     let commentContainer = document.getElementById("comment-post");
     document.body.style.overflow = "hidden";
+    currentPostId = postId;
 
     viewCommentsModal.style.display = "flex";
     viewCommentsModal.querySelector("h2").childNodes[0].nodeValue = postsDataById[postId]["display_name"] + "'s post";
@@ -63,3 +66,5 @@ async function getComments(postId, commentContainer){
         commentContainer.innerHTML += `<p>${comment['content']}</p>`; 
     });
 }
+
+
