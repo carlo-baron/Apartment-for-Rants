@@ -23,13 +23,18 @@
 
 <?php
     if($_SERVER["REQUEST_METHOD"] == "POST"){
-        $title = filter_input(INPUT_POST, "title", FILTER_SANITIZE_SPECIAL_CHARS);
-        $content = filter_input(INPUT_POST, "content", FILTER_SANITIZE_SPECIAL_CHARS);
+        $title = $_POST['title'];
+        $content = $_POST['content']; 
         $id = $_SESSION["id"];
-        $sql = "INSERT INTO posts (title, content, user_id) VALUES ('$title', '$content', '$id')";
-        mysqli_query($connection, $sql);
-        mysqli_close($connection);
+        MakePost($connection, $title, $content, $id);
+    }
+
+    function MakePost($connection, $title, $content, $id){
+        $stmt = $connection->prepare("INSERT INTO posts (title, content, user_id) VALUES(?, ?, ?)"); 
+        $stmt->bind_param("ssi", $title, $content, $id);
+        $stmt->execute();
+        $stmt->close();
         header("Location: main.php");
-        exit;
+        exit();
     }
 ?>
